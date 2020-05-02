@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #242333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  font-size: small;
+}
+
+.container {
+  height: 40vh;
+  width: 400px;
+}
+
+.seat {
+  background-color: #fff;
+  color: aliceblue;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  clip-path: polygon(
+    48% 15%,
+    92% 8%,
+    74% 64%,
+    100% 63%,
+    73% 89%,
+    26% 89%,
+    0 64%,
+    24% 65%,
+    6% 6%
+  );
+  border-radius: 10px;
+
+  display: inline-block;
+}
+
+.seat:nth-of-type(5) {
+  margin-right: 20px;
+}
+
+.seat:nth-last-of-type(5) {
+  margin-left: 20px;
+}
+.seatbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.screen {
+  background-color: white;
+  width: 80%;
+  height: 100px;
+  clip-path: polygon(100% 0, 95% 100%, 5% 100%, 0 0);
+  margin: auto;
+  margin-bottom: 5%;
+}
+.cinemaScreen {
+  content: "";
+  filter: drop-shadow(0px 10px 5px rgba(255, 255, 255, 0.5));
+}
+.temp {
+}
+
+.seat.sample {
+}
+
+.seat.selected {
+  background-color: aqua;
+}
+
+.seat.occupied {
+  background-color: grey;
+}
+
+.seat:not(.occupied):not(.sample):hover {
+  cursor: pointer;
+  transform: scale(2);
+}
+
+.showCaseArea,
+.movieSelectorBox {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20px;
+  text-align: cen;
+}
+
+.messagebox {
+  display: flex;
+  width: auto;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
